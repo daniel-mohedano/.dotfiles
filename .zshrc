@@ -78,8 +78,9 @@ source $ZSH/oh-my-zsh.sh
 VIM='nvim'
 export EDITOR='nvim'
 
-path+=('$HOME/julia-1.9.1/bin')
-path+=('$HOME/.local/scripts')
+typeset -U path
+path+=('/home/dan/julia-1.9.1/bin')
+path+=('/home/dan/.local/scripts')
 
 alias ll='ls -alF'
 alias la='ls -A'
