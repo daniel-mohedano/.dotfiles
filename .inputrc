@@ -1,6 +1,29 @@
-# Vim mode
-#set editing-mode vi
-#set show-mode-in-prompt on
+# Vim mode - enable it and define different strings for insert and command mode
+set editing-mode vi
+set show-mode-in-prompt on
+set vi-ins-mode-string \1\e[6 q\2
+set vi-cmd-mode-string \1\e[2 q\2
+
+# Decrease delay time in key sequences (useful for Esc)
+set keyseq-timeout 50
+
+# If vim mode active, remap:
+# - ctrl-l to clear display
+# - j and k to move in history (cmd mode only)
+# - 'kj' to escape insert mode
+$if mode=vi
+set keymap vi-command
+"\C-l": clear-display
+k: history-search-backward
+j: history-search-forward
+set keymap vi-insert
+"\C-l": clear-display
+"kj": "\e"
+$endif
+
+# History movement with arrow keys
+"\e[A": history-search-backward
+"\e[B": history-search-forward
 
 # Colors
 set colored-stats on
@@ -10,6 +33,3 @@ set colored-completion-prefix on
 set show-all-if-ambiguous on
 set completion-ignore-case on
 
-# Command history search
-"\e[A": history-search-backward
-"\e[B": history-search-forward

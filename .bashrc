@@ -5,8 +5,8 @@ HISTFILESIZE=2000
 
 # Settings
 stty -ixon              # Disable ctrl-s and ctrl-q
-shopt -s histappend
-shopt -s checkwinsize
+shopt -s histappend     # Append history
+shopt -s checkwinsize   # Resize window correctly after each command
 shopt -s autocd         # Auto cd into directory just by typing the directory name
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -23,6 +23,7 @@ alias ls='ls -hN --color=auto --group-directories-first'
 alias ll='ls -alhN --color=auto --group-directories-first'
 
 # Other aliases
+alias vim="nvim"
 alias mkd='mkdir -pv'
 alias ..="cd .."
 alias cl="clear"
