@@ -12,6 +12,5 @@ Currently holds configurations for:
 
 - `nvim`
 - `tmux`
-- `zsh`
 - Scripts:
     - `tmux-cht.sh`: script using `fzf` to perform `cht.sh` requests in new `tmux` windows automatically
