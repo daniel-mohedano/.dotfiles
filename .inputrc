@@ -1,0 +1,15 @@
+# Vim mode
+#set editing-mode vi
+#set show-mode-in-prompt on
+
+# Colors
+set colored-stats on
+set colored-completion-prefix on
+
+# Completion settings
+set show-all-if-ambiguous on
+set completion-ignore-case on
+
+# Command history search
+"\e[A": history-search-backward
+"\e[B": history-search-forward

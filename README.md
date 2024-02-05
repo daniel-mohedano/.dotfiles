@@ -10,7 +10,8 @@ stow .
 
 Currently holds configurations for:
 
-- `nvim`
-- `tmux`
+- `nvim`: text editor
+- `tmux`: terminal multiplexer
+- `bash`: shell
 - Scripts:
     - `tmux-cht.sh`: script using `fzf` to perform `cht.sh` requests in new `tmux` windows automatically
