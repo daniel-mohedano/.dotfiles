@@ -21,6 +21,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ls='ls -hN --color=auto --group-directories-first'
 alias ll='ls -alhN --color=auto --group-directories-first'
+export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:" # Fixes highlighting in ls with folders
 
 # Other aliases
 alias vim="nvim"
