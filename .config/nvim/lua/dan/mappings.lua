@@ -90,7 +90,7 @@ end
 if is_available "vim-fugitive" then
     maps.n["<leader>gs"] = { vim.cmd.Git, desc = "VimFugitive - Git" }
     maps.n["<leader>p"] = { function() vim.cmd.Git('push') end, desc = "VimFugitive - Push" }
-    maps.n["<leader>P"] = { function() vim.cmd.Git({'pull', '--rebase'}) end, desc = "VimFugitive - Pull (rebase)" }
+    maps.n["<leader>P"] = { function() vim.cmd.Git('pull --rebase') end, desc = "VimFugitive - Pull (rebase)" }
     maps.n["<leader>t"] = { "<cmd>Git push -u origin<cr>", desc = "VimFugitive - Set branch to push" }
 end
 
