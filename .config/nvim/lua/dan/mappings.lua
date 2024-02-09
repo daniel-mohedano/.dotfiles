@@ -36,8 +36,8 @@ maps.n["<C-Up>"] = { "<cmd>horizontal resize +5<CR>", desc = "Increase vertical 
 maps.n["<C-Down>"] = { "<cmd>horizontal resize -5<CR>", desc = "Decrease vertical size" }
 
 -- SELECTION BINDINGS --
-maps.v["J"] = { "<cmd>m '>+1<CR>gv=gv", desc = "Shift line down in visual mode" }
-maps.v["K"] = { "<cmd>m '<-2<CR>gv=gv", desc = "Shift line up in visual mode" }
+maps.v["J"] = { ":m '>+1<CR>gv=gv", desc = "Shift line down in visual mode" }
+maps.v["K"] = { ":m '<-2<CR>gv=gv", desc = "Shift line up in visual mode" }
 -- Stay in indent mode
 maps.v["<S-Tab>"] = { "<gv", desc = "Unindent line" }
 maps.v["<Tab>"] = { ">gv", desc = "Indent line" }
