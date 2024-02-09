@@ -56,7 +56,6 @@ maps.v["<leader>d"] = { "\"_d", desc = "Delete content without saving deleted co
 -- TELESCOPE --
 if is_available "telescope.nvim" then
     local builtin = require("telescope.builtin")
-
     maps.n["<leader>ff"] = { builtin.find_files,  desc = "Telescope - Find files" }
     maps.n["<leader>fg"] = { builtin.git_files, desc = "Telescope - Find git files" }
     maps.n["<leader>fs"] = { builtin.live_grep, desc = "Telescope - Find string" }
@@ -67,7 +66,6 @@ end
 if is_available "harpoon" then
     local mark = require("harpoon.mark")
     local ui = require("harpoon.ui")
-
     maps.n["<leader>ha"] = { mark.add_file, desc = "Harpoon - Add Mark" }
     maps.n["<leader>he"] = { ui.toggle_quick_menu, desc = "Harpoon - Quick Menu Toggle" }
     maps.n["<leader>h1"] = { function() ui.nav_file(1) end, desc = "Harpoon - Navigate to 1" }
@@ -89,25 +87,19 @@ if is_available "vim-fugitive" then
     --maps.n["<leader>t"] = { "<cmd>Git push -u origin<cr>", desc = "VimFugitive - Set branch to push" }
 end
 
--- MASON PACKAGE MANAGER --
-if is_available "mason.nvim" then
-    maps.n["<leader>pm"] = { "<cmd>Mason<cr>", desc = "Mason Installer" }
-    maps.n["<leader>pM"] = { "<cmd>MasonUpdateAll<cr>", desc = "Mason Update" }
-end
-
 -- LSP BINDINGS --
 maps.n["K"] = { vim.lsp.buf.hover, desc = "LSP - Hover" }
 maps.n["gd"] = { vim.lsp.buf.definition, desc = "LSP - Definition" }
 maps.n["gD"] = { vim.lsp.buf.declaration, desc = "LSP - Declaration" }
 maps.n["gi"] = { vim.lsp.buf.implementation, desc = "LSP - Implementation" }
-maps.n["go"] = { vim.lsp.buf.type_definition, desc = "LSP - Type Definition" }
+maps.n["gt"] = { vim.lsp.buf.type_definition, desc = "LSP - Type Definition" }
 maps.n["gr"] = { vim.lsp.buf.references, desc = "LSP - References" }
+maps.n["gl"] = { vim.diagnostic.open_float, desc = "LSP - Open float" }
 maps.i["<C-h>"] = { vim.lsp.buf.signature_help, desc = "LSP - Signature Help" }
 maps.n["<F2>"] = { vim.lsp.buf.rename, desc = "LSP - Rename" }
 maps.n["<F3>"] = { function() vim.lsp.buf.format({ async = true }) end, desc = "LSP - Format" }
 maps.v["<F3>"] = maps.n["<F3>"]
 maps.n["<F4>"] = { vim.lsp.buf.code_action, desc = "LSP - Code Action" }
-maps.n["gl"] = { vim.diagnostic.open_float, desc = "LSP - Open float" }
 
 -- TROUBLE --
 if is_available "trouble.nvim" then
