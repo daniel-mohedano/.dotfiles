@@ -113,8 +113,8 @@ maps.n["gl"] = { vim.diagnostic.open_float, desc = "LSP - Open float" }
 if is_available "trouble.nvim" then
     local trouble = require("trouble")
     maps.n["<leader>tt"] = { function() trouble.toggle() end, desc = "Trouble Toggle" }
-    maps.n["[d"] = { function() trouble.next({skip_grous = true, jump = true}) end, desc = "Trouble - Next" }
-    maps.n["]d"] = { function() trouble.previous({skip_grous = true, jump = true}) end, desc = "Trouble - Previous" }
+    maps.n["[t"] = { function() trouble.next({skip_grous = true, jump = true}) end, desc = "Trouble - Next" }
+    maps.n["]t"] = { function() trouble.previous({skip_grous = true, jump = true}) end, desc = "Trouble - Previous" }
 end
 
 utils.set_mappings(maps)
