@@ -57,14 +57,9 @@ maps.v["<leader>d"] = { "\"_d", desc = "Delete content without saving deleted co
 if is_available "telescope.nvim" then
     local builtin = require("telescope.builtin")
 
-    maps.n["<leader>ff"] = { builtin.find_files, desc = "Telescope - Find files" }
-    maps.n["<leader>fg"] = { builtin.git_files, desc = "Telescope - Find Git Files" }
-    maps.n["<leader>fs"] = {
-        function()
-            builtin.grep_string({ search = vim.fn.input("Grep > ") })
-        end,
-        desc = "Telescope - Find String in Files"
-    }
+    maps.n["<leader>ff"] = { builtin.find_files,  desc = "Telescope - Find files" }
+    maps.n["<leader>fg"] = { builtin.git_files, desc = "Telescope - Find git files" }
+    maps.n["<leader>fs"] = { builtin.live_grep, desc = "Telescope - Find string" }
     maps.n["<leader>fh"] = { builtin.help_tags, desc = "Telescope - Help tags" }
 end
 

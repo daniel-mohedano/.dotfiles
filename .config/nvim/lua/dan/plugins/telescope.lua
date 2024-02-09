@@ -27,7 +27,15 @@ function M.config()
                     ["k"] = actions.move_selection_previous,
                 },
             },
-        }
+        },
+        pickers = {
+            find_files = { hidden = true, no_ignore = true, follow = true },
+            live_grep = {
+                additional_args = function(opts)
+                    return {"--hidden"}
+                end
+            }
+        },
     }
 end
 
