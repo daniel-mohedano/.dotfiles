@@ -86,7 +86,7 @@ if is_available "vim-fugitive" then
     maps.n["<leader>gs"] = { vim.cmd.Git, desc = "VimFugitive - Git" }
     maps.n["<leader>p"] = { function() vim.cmd.Git('push') end, desc = "VimFugitive - Push" }
     maps.n["<leader>P"] = { function() vim.cmd.Git('pull --rebase') end, desc = "VimFugitive - Pull (rebase)" }
-    maps.n["<leader>t"] = { "<cmd>Git push -u origin<cr>", desc = "VimFugitive - Set branch to push" }
+    --maps.n["<leader>t"] = { "<cmd>Git push -u origin<cr>", desc = "VimFugitive - Set branch to push" }
 end
 
 -- MASON PACKAGE MANAGER --
@@ -107,14 +107,14 @@ maps.n["<F2>"] = { vim.lsp.buf.rename, desc = "LSP - Rename" }
 maps.n["<F3>"] = { function() vim.lsp.buf.format({ async = true }) end, desc = "LSP - Format" }
 maps.v["<F3>"] = maps.n["<F3>"]
 maps.n["<F4>"] = { vim.lsp.buf.code_action, desc = "LSP - Code Action" }
-
 maps.n["gl"] = { vim.diagnostic.open_float, desc = "LSP - Open float" }
 
 -- TROUBLE --
 if is_available "trouble.nvim" then
     local trouble = require("trouble")
-    maps.n["<leader>xd"] = { function() trouble.toggle("document_diagnostics") end, desc = "Trouble Doc Diagnostics" }
-    maps.n["<leader>xq"] = { function() trouble.toggle("quickfix") end, desc = "Trouble Quickfix" }
+    maps.n["<leader>tt"] = { function() trouble.toggle() end, desc = "Trouble Toggle" }
+    maps.n["[d"] = { function() trouble.next({skip_grous = true, jump = true}) end, desc = "Trouble - Next" }
+    maps.n["]d"] = { function() trouble.previous({skip_grous = true, jump = true}) end, desc = "Trouble - Previous" }
 end
 
 utils.set_mappings(maps)
