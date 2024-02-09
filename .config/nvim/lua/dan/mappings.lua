@@ -102,7 +102,7 @@ maps.n["gD"] = { vim.lsp.buf.declaration, desc = "LSP - Declaration" }
 maps.n["gi"] = { vim.lsp.buf.implementation, desc = "LSP - Implementation" }
 maps.n["go"] = { vim.lsp.buf.type_definition, desc = "LSP - Type Definition" }
 maps.n["gr"] = { vim.lsp.buf.references, desc = "LSP - References" }
-maps.n["gh"] = { vim.lsp.buf.signature_help, desc = "LSP - Signature Help" }
+maps.i["<C-h>"] = { vim.lsp.buf.signature_help, desc = "LSP - Signature Help" }
 maps.n["<F2>"] = { vim.lsp.buf.rename, desc = "LSP - Rename" }
 maps.n["<F3>"] = { function() vim.lsp.buf.format({ async = true }) end, desc = "LSP - Format" }
 maps.v["<F3>"] = maps.n["<F3>"]
