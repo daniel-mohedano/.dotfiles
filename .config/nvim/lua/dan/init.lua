@@ -12,8 +12,7 @@ ADD_PLUGIN("dan.plugins.undotree")
 ADD_PLUGIN("dan.plugins.trouble")
 ADD_PLUGIN("dan.plugins.lualine")
 -- LSP
-ADD_PLUGIN("dan.plugins.lsp-zero")
-ADD_PLUGIN("dan.plugins.mason")
+ADD_PLUGIN("dan.plugins.lsp")
 
 require("dan.plugins.lazy")
 require("dan.mappings")
