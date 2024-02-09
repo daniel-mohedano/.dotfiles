@@ -1,6 +1,7 @@
 -- vim.opt.guicursor = ""
 
 vim.g.mapleader = " "
+vim.g.netrw_banner = 0
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -36,3 +37,4 @@ vim.opt.completeopt = { "menuone", "noselect" }
 vim.cmd "set clipboard+=unnamedplus"
 vim.cmd "set whichwrap+=<,>,[,]"
 vim.cmd [[set iskeyword+=-]] -- Consider as a whole word things like abc-cde
+
