@@ -1,6 +1,6 @@
 local M = {
     "nvim-treesitter/nvim-treesitter",
-    build = "TSUpdate",
+    build = ":TSUpdate",
     lazy = false,
     dependencies = {
         'nvim-treesitter/nvim-treesitter-context', -- adds context to show in which block of code you are currently at
