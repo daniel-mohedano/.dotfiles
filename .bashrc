@@ -4,10 +4,10 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # Settings
-stty -ixon              # Disable ctrl-s and ctrl-q
-shopt -s histappend     # Append history
-shopt -s checkwinsize   # Resize window correctly after each command
-shopt -s autocd         # Auto cd into directory just by typing the directory name
+[[ $- == *i* ]] && stty -ixon   # Disable ctrl-s and ctrl-q, but check for interactive shell first
+shopt -s histappend             # Append history
+shopt -s checkwinsize           # Resize window correctly after each command
+shopt -s autocd                 # Auto cd into directory just by typing the directory name
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
