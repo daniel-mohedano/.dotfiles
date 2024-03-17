@@ -10,7 +10,7 @@ local M = {
         'hrsh7th/cmp-cmdline',
         'hrsh7th/nvim-cmp',
         --"j-hui/fidget.nvim",
-        'hrsh7th/cmp-nvim-lsp-signature-help',
+        --'hrsh7th/cmp-nvim-lsp-signature-help',
     },
 }
 
@@ -73,7 +73,6 @@ function M.config()
         },
         sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
-                { name = 'nvim_lsp_signature_help' },
             }, {
               { name = 'buffer' },
         })
