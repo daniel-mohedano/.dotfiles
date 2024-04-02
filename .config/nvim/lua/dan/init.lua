@@ -11,6 +11,7 @@ ADD_PLUGIN("dan.plugins.harpoon")
 ADD_PLUGIN("dan.plugins.undotree")
 ADD_PLUGIN("dan.plugins.trouble")
 ADD_PLUGIN("dan.plugins.lualine")
+ADD_PLUGIN("dan.plugins.pairs")
 -- LSP
 ADD_PLUGIN("dan.plugins.lsp")
 
