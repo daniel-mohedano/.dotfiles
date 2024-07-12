@@ -32,3 +32,18 @@ alias si="source /opt/intel/oneapi/setvars.sh"
 
 # Prompt configuration
 PROMPT_COMMAND='PS1_CMD1=$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)'; PS1='\[\e[90m\][\u@\h\[\e[0m\] \[\e[92;1m\]\w\[\e[0;90m\]](\[\e[33;3m\]${PS1_CMD1}\[\e[0;90m\])\[\e[0m\]\$ '
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/dan/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/dan/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<

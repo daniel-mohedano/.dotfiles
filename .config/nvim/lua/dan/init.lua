@@ -17,3 +17,4 @@ ADD_PLUGIN("dan.plugins.lsp")
 
 require("dan.plugins.lazy")
 require("dan.mappings")
+require("dan.plugins.julials")
