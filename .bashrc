@@ -28,7 +28,8 @@ alias vim="nvim"
 alias mkd='mkdir -pv'
 alias ..="cd .."
 alias cl="clear"
-alias si="source /opt/intel/oneapi/setvars.sh"
+alias mlhofem="module load gidpost compiler arpack impi parmetis scotch mumps"
+alias mlhofemfpic="module load gidpost_fPIC compiler arpack_fPIC impi parmetis_fPIC scotch_fPIC mumps_fPIC"
 
 # Prompt configuration
 PROMPT_COMMAND='PS1_CMD1=$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)'; PS1='\[\e[90m\][\u@\h\[\e[0m\] \[\e[92;1m\]\w\[\e[0;90m\]](\[\e[33;3m\]${PS1_CMD1}\[\e[0;90m\])\[\e[0m\]\$ '

@@ -21,6 +21,7 @@ local ensured_servers = {
     "pyright",
     "julials",
     "fortls",
+    "texlab",
 }
 
 function M.config()

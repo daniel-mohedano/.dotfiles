@@ -20,7 +20,8 @@ function M.config()
             "python",
             "markdown",
             "markdown_inline",
-            "nix"
+            "nix",
+            "latex",
         }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
         sync_install = false,
         auto_install = true,
