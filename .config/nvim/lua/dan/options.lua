@@ -37,4 +37,6 @@ vim.opt.completeopt = { "menuone", "noselect" }
 vim.cmd "set clipboard+=unnamedplus"
 vim.cmd "set whichwrap+=<,>,[,]"
 vim.cmd [[set iskeyword+=-]] -- Consider as a whole word things like abc-cde
+vim.cmd "set list lcs=tab:>>,eol:↵"
 
+--pane	dotfiles	1	1	:*	1	dan-system	:/home/dan/.dotfiles	1	bash	:
