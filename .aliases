@@ -1,8 +1,4 @@
 #!/bin/bash
-
-# Ubuntu specific
-alias sa="sudo apt-get"
-
 # Color related
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
