@@ -8,7 +8,9 @@ local M = {
 function M.config()
     require("lualine").setup({
         options = {
-            theme = "ayu_dark",
+            theme = "16color",
+            section_separators = { left = '', right = '' },
+            component_separators = { left = '|', right = '|' }
         },
     })
 end

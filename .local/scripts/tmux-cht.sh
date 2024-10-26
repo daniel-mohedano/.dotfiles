@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 #@theprimeagen
 selected=`cat ~/.config/tmux/tmux-cht-languages ~/.config/tmux/tmux-cht-command | fzf`
 if [[ -z $selected ]]; then
