@@ -1,0 +1,16 @@
+[window]
+opacity = 0.9
+padding.x = 5
+padding.y = 5
+decorations = "Full"
+startup_mode = "Maximized"
+
+[font]
+normal.family = "Inconsolata Nerd Font Mono"
+bold.family = "Inconsolata Nerd Font Mono"
+italic.family = "Inconsolata Nerd Font Mono"
+bold_italic.family = "Inconsolata Nerd Font Mono"
+size = 18.0
+
+[terminal]
+shell = "/bin/zsh"
