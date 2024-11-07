@@ -1,24 +1,21 @@
 # nvim-config
 
-Personal Neovim configuration. 
+Personal Neovim configuration.
 
-This branch contains a modification of my original config aimed at being as minimal as possible to reduce clutter both on execution and in the configuration.
+## Plugins
 
-## Features
-
-- Plugin management using [`lazy`](https://github.com/folke/lazy.nvim)
-- Syntax highlighting using [`treesitter`](https://github.com/nvim-treesitter/nvim-treesitter)
-- Fuzzy finding using [`telescope`](https://github.com/nvim-telescope/telescope.nvim)
-- Buffer changes record using [`undotree`](https://github.com/mbbill/undotree)
-- File marks for fast movement between files using [`harpoon`](https://github.com/ThePrimeagen/harpoon)
-- LSP using [`lsp-zero`](https://github.com/VonHeikemen/lsp-zeron.nvim) and [`mason`](https://github.com/williamboman/mason.nvim)
-- Git wrapping using [`fugitive`](https://github.com/tpope/vim-fugitive)
-- Diagnostics summary using [`trouble`](https://github.com/folke/trouble.nvim)
-- Status line using [`lualine`](https://github.com/nvim-lualine/lualine.nvim)
-
-## Structure
-
-- `lua/dan/mappings.lua`: keybindings
-- `lua/dan/options.lua`: vim options
-- `lua/dan/utils/`: some utils used by the configuration
-- `lua/dan/plugins/`: plugin configuration
+- [`lazy.nvim`](https://github.com/folke/lazy.nvim): plugin manager
+- Lsp related:
+    - [`mason.nvim`](https://github.com/williamboman/mason.nvim): lsp, dap, linter and formatter package manager
+    - [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp): completion engine
+- [`fugitive`](https://github.com/tpope/vim-fugitive): git plugin
+- [`gitsigns`](https://github.com/lewis6991/gitsigns.nvim): git decorations in file
+- [`lazydev`](github.com/folke/lazydev.nvim): configure luals to edit neovim config
+- [`noice`](https://github.com/folke/noice.nvim): replace UI for messages, cmdline and popups
+- [`oil`](https://github.com/stevearc/oil.nvim): text buffer file explorer
+- [`mini.pairs`](https://github.com/echasnovski/mini.pairs): paired characters functionality
+- [`mini.statusline`](https://github.com/nvim-lualine/lualine.nvim): status line
+- [`telescope`](https://github.com/nvim-telescope/telescope.nvim): fuzzy finder
+- [`treesitter`](https://github.com/folke/todo-comments.nvim): todo related functionality
+- [`trouble`](https://github.com/folke/trouble.nvim): diagnostics ui
+- [`undotree`](https://github.com/mbbill/undotree): undo history tree

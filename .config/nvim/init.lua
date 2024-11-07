@@ -1,1 +1,1 @@
-require("dan")
+require("config")
