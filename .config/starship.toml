@@ -1,0 +1,82 @@
+format = """
+[](od_black)\
+$os\
+[](bg:od_gutter_grey fg:od_black)\
+$directory\
+[](bg:od_comment_grey fg:od_gutter_grey)\
+$git_branch\
+$git_metrics\
+[ ](od_comment_grey)\
+ """
+
+
+right_format = """
+[](od_light_yellow )
+$character\
+$cmd_duration\
+[](bg:od_light_yellow fg:od_dark_yellow)
+$time\
+[](od_dark_yellow)\
+"""
+
+add_newline = false
+palette = "onedark"
+
+[palettes.onedark]
+abs_black = "#000000"
+abs_white = "#ffffff"
+od_black = "#282c34"
+od_white = "#abb2bf"
+od_light_red = "#e06c75"
+od_dark_red = "#be5046"
+od_green = "#98c379"
+od_light_yellow = "#e5c07b"
+od_dark_yellow = "#d19a66"
+od_blue = "#61afef"
+od_magenta = "#c678dd"
+od_cyan = "#56b6c2"
+od_gutter_grey = "#4b5263"
+od_comment_grey = "#5c6370"
+
+[character]
+format = "[ $symbol ](bg:od_light_yellow)"
+success_symbol = "[](bold bg:od_light_yellow fg:od_green)"
+error_symbol = "[✖](bold bg:od_light_yellow  fg:od_dark_red)"
+
+[cmd_duration]
+min_time = 1_000
+format = "[$duration ]($style)"
+style = "bg:od_light_yellow fg:od_black"
+
+[directory]
+format = "[ $path ]($style)[$read_only]($read_only_style)"
+read_only = " R"
+read_only_style = "red"
+truncation_length = 5
+truncate_to_repo = false
+style = "bold bg:od_gutter_grey fg:od_white"
+
+[git_branch]
+format = "[ $symbol$branch(:$remote_branch) ]($style)"
+style = "bold bg:od_comment_grey fg:od_white"
+symbol = " "
+
+[git_metrics]
+disabled = false
+format = "[\\(](bold bg:od_comment_grey fg:od_white)([+$added]($added_style))([-$deleted]($deleted_style))[\\) ](bold bg:od_comment_grey fg:od_white)"
+added_style = "bg:od_comment_grey  fg:od_white"
+deleted_style = "bg:od_comment_grey  fg:od_white"
+
+[time]
+disabled = false
+format = "[$time]($style)"
+time_format = "%H:%M"
+style = "bold bg:od_dark_yellow fg:od_black"
+
+[os]
+disabled = false
+format = "[$symbol ]($style)"
+style = "bg:od_black fg:abs_white"
+
+[os.symbols]
+Macos = ""

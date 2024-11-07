@@ -15,11 +15,9 @@ shopt -s autocd                 # Auto cd into directory just by typing the dire
 # source aliases
 [ -f ~/.aliases ] && source ~/.aliases
 
-# source tfm configuration
-[ -f ~/.tfm-config ] && source ~/.tfm-config
-
-# source work configuration
-#[ -f ~/.work-config ] && source ~/.work-config
+# custom configurations
+#[ -f ~/.config-tfm ] && source ~/.config-tfm
+[ -f ~/.config-work ] && source ~/.config-work
 
 # Prompt configuration
 PROMPT_COMMAND='PS1_CMD1=$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)'
