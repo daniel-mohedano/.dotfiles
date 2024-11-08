@@ -1,6 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+# custom configurations
+#[ -f ~/.config-tfm ] && source ~/.config-tfm
+[ -f $HOME/.config-work ] && source $HOME/.config-work
+
 # starship
 eval "$(starship init zsh --print-full-init)"
 
@@ -117,7 +121,3 @@ source $ZSH/oh-my-zsh.sh
 
 # source aliases
 [ -f ~/.aliases ] && source ~/.aliases
-
-# custom configurations
-#[ -f ~/.config-tfm ] && source ~/.config-tfm
-[ -f $HOME/.config-work ] && source $HOME/.config-work
