@@ -1,0 +1,45 @@
+let mapleader=" "
+
+""" Common settings -------------------------
+set completeopt="menu,menuone,noselect"
+set cursorline
+set expandtab
+set hlsearch
+set ignorecase
+set incsearch
+set list
+set mouse="a"
+set number
+set relativenumber
+set scrolloff=4
+set shiftround
+set shiftwidth=2
+set showmode
+set smartindent
+set splitbelow
+set splitright
+set tabstop=2
+set updatetime=200
+set wrap=false
+
+""" Neovim mappings
+inoremap kj <esc>
+imap <esc> :noh<cr><esc>
+nmap <esc> :noh<cr><esc>
+
+vnoremap < <gv
+vnoremap > >gv
+
+nmap <leader>w :w<cr><esc>
+nmap <leader>- <c-w>s
+nmap <leader>| <c-w>v
+
+nmap <leader>q :q<cr>
+xnoremap p "_dP
+
+nmap <leader>sf <Action>(GotoFile)
+nmap <leader>ss <Action>(TextSearchAction)
+nmap <leader>gd <Action>(GotoDefinition)
+nmap <leader>gD <Action>(GotoDeclaration)
+nmap <leader>gI <Action>(GotoImplementation)
+nmap <leader>gy <Action>(GotoTypeDeclaration)

@@ -18,8 +18,8 @@ vim.opt.fillchars = {
 	eob = " ",
 }
 vim.opt.foldlevel = 99
---vim.opt.hlsearch = false
---vim.opt.incsearch = true
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.laststatus = 3 -- global statusline
 vim.opt.linebreak = true -- Wrap lines at convenient points
