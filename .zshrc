@@ -2,8 +2,8 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # custom configurations
-#[ -f ~/.config-tfm ] && source ~/.config-tfm
-[ -f $HOME/.config-work ] && source $HOME/.config-work
+[ -f ~/.config-tfm ] && source ~/.config-tfm
+#[ -f $HOME/.config-work ] && source $HOME/.config-work
 
 # starship
 eval "$(starship init zsh --print-full-init)"
