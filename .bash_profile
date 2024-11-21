@@ -5,3 +5,4 @@ PATH="$PATH:$HOME/.local/bin"
 export EDITOR="nvim"
 
 [ -f ~/.bashrc ] && source ~/.bashrc
+. "$HOME/.cargo/env"

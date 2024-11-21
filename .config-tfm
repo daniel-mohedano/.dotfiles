@@ -13,6 +13,8 @@ case ":$PATH:" in
         ;;
 esac
 
+source /etc/profile.d/lmod2.sh
+
 # <<< juliaup initialize <<<
 alias mlhofem="module load gidpost compiler arpack impi parmetis scotch mumps"
 alias mlhofemfpic="module load gidpost_fPIC compiler arpack_fPIC impi parmetis_fPIC scotch_fPIC mumps_fPIC"
