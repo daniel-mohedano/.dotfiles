@@ -84,6 +84,7 @@ plugins=(
     colored-man-pages
     git
     jsontools
+		ssh-agent
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
