@@ -1,5 +1,5 @@
 local disabled_plugins = {
-  "folke/tokyonight.nvim",
+  --"folke/tokyonight.nvim",
   "catppuccin/nvim",
   "akinsho/bufferline.nvim",
   "nvim-neo-tree/neo-tree.nvim",
