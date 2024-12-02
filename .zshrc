@@ -2,8 +2,8 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # custom configurations
-[ -f ~/.config-tfm ] && source ~/.config-tfm
-#[ -f $HOME/.config-work ] && source $HOME/.config-work
+#[ -f ~/.config-tfm ] && source ~/.config-tfm
+[ -f $HOME/.config-work ] && source $HOME/.config-work
 
 # starship
 eval "$(starship init zsh --print-full-init)"
@@ -84,7 +84,7 @@ plugins=(
     colored-man-pages
     git
     jsontools
-		ssh-agent
+#		ssh-agent
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -119,6 +119,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+. "$HOME/.cargo/env" 
 
 # source aliases
 [ -f ~/.aliases ] && source ~/.aliases

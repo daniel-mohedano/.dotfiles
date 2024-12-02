@@ -2,8 +2,8 @@ return {
   "LazyVim/LazyVim",
   opts = {
     colorscheme = function()
-      require("tokyonight").setup({ style = "night" })
-      require("tokyonight").load()
+      require("onedark").setup({ style = "darker" })
+      require("onedark").load()
     end,
   },
 }
