@@ -22,4 +22,10 @@ return {
       { "<leader>gs", false },
     },
   },
+  {
+    "ibhagwan/fzf-lua",
+    keys = {
+      { "<leader>/", false },
+    },
+  },
 }
