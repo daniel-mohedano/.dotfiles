@@ -19,6 +19,18 @@ return {
           },
           settings = { julia = { format = { indent = 4 } } },
         },
+        fortls = {
+          settings = {
+            fortls = {
+              enableCodeActions = true,
+              hoverSignature = true,
+              provideHover = true,
+              useSignatureHelp = true,
+              maxLineLength = 120,
+              variableHover = true,
+            },
+          },
+        },
       },
     },
   },
