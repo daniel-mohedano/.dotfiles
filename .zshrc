@@ -11,8 +11,11 @@ eval "$(starship init zsh --print-full-init)"
 # exports
 export EDITOR="nvim"
 
-# Path to your Oh My Zsh installation.
+# path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+# enable vim mode
+bindkey -v
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -87,38 +90,14 @@ plugins=(
 #		ssh-agent
     zsh-autosuggestions
     zsh-syntax-highlighting
+		zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
-
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
 
 . "$HOME/.cargo/env" 
 
