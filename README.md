@@ -13,6 +13,7 @@ Configuration using:
     - [`oh-my-zsh`](https://ohmyz.sh): zsh configuration framework
         - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
         - [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)
+        - [`zsh-vi-mode`](https://github.com/jeffreytse/zsh-vi-mode)
     - [`starship`](https://starship.rs/): shell prompt
 - [`exa`](https://github.com/eza-community/eza): ls alternative
 - [`tmux`](https://github.com/tmux/tmux): terminal multiplexer
