@@ -29,7 +29,11 @@ require("lazy").setup({
     --{ import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.lang.clangd" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.json" },
+    { import = "lazyvim.plugins.extras.lang.markdown" },
+    { import = "lazyvim.plugins.extras.lang.toml" },
     { import = "lazyvim.plugins.extras.test.core" },
+    { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     { import = "plugins" },
   },
   defaults = {
@@ -41,7 +45,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "onedark" } },
+  -- install = { colorscheme = { "onedark", "tokyonight" } },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
