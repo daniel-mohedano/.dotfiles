@@ -1,52 +1,73 @@
 format = """
-[](od_black)\
 $os\
-[](bg:od_gutter_grey fg:od_black)\
 $directory\
-[](bg:od_comment_grey fg:od_gutter_grey)\
 $git_branch\
 $git_metrics\
-[ ](od_comment_grey)\
- """
+[ ]()
+"""
 
 
 right_format = """
-[](od_light_yellow )
 $character\
 $cmd_duration\
-[](bg:od_light_yellow fg:od_dark_yellow)
 $time\
-[](od_dark_yellow)\
 """
 
 add_newline = false
-palette = "onedark"
+palette = "catppuccin_latte"
 
 [palettes.onedark]
-abs_black = "#000000"
-abs_white = "#ffffff"
-od_black = "#282c34"
-od_white = "#abb2bf"
-od_light_red = "#e06c75"
-od_dark_red = "#be5046"
-od_green = "#98c379"
-od_light_yellow = "#e5c07b"
-od_dark_yellow = "#d19a66"
-od_blue = "#61afef"
-od_magenta = "#c678dd"
-od_cyan = "#56b6c2"
-od_gutter_grey = "#4b5263"
-od_comment_grey = "#5c6370"
+base = "#ffffff"
+text = "#282c34"
+crust = "#abb2bf"
+maroon = "#e06c75"
+red = "#be5046"
+green = "#98c379"
+yellow = "#e5c07b"
+peach = "#d19a66"
+blue = "#61afef"
+mauve = "#c678dd"
+sapphire = "#56b6c2"
+subtext1 = "#4b5263"
+subtext0 = "#5c6370"
+
+[palettes.catppuccin_latte]
+rosewater = "#dc8a78"
+flamingo = "#dd7878"
+pink = "#ea76cb"
+mauve = "#8839ef"
+red = "#d20f39"
+maroon = "#e64553"
+peach = "#fe640b"
+yellow = "#df8e1d"
+green = "#40a02b"
+teal = "#179299"
+sky = "#04a5e5"
+sapphire = "#209fb5"
+blue = "#1e66f5"
+lavender = "#7287fd"
+text = "#4c4f69"
+subtext1 = "#5c5f77"
+subtext0 = "#6c6f85"
+overlay2 = "#7c7f93"
+overlay1 = "#8c8fa1"
+overlay0 = "#9ca0b0"
+surface2 = "#acb0be"
+surface1 = "#bcc0cc"
+surface0 = "#ccd0da"
+base = "#eff1f5"
+mantle = "#e6e9ef"
+crust = "#dce0e8"
 
 [character]
-format = "[ $symbol ](bg:od_light_yellow)"
-success_symbol = "[](bold bg:od_light_yellow fg:od_green)"
-error_symbol = "[✖](bold bg:od_light_yellow  fg:od_dark_red)"
+format = "[ $symbol ](bg:crust)"
+success_symbol = "[](bold bg:crust fg:green)"
+error_symbol = "[✖](bold bg:crust  fg:red)"
 
 [cmd_duration]
 min_time = 1_000
 format = "[$duration ]($style)"
-style = "bg:od_light_yellow fg:od_black"
+style = "bg:crust fg:text"
 
 [directory]
 format = "[ $path ]($style)[$read_only]($read_only_style)"
@@ -54,29 +75,29 @@ read_only = " R"
 read_only_style = "red"
 truncation_length = 5
 truncate_to_repo = false
-style = "bold bg:od_gutter_grey fg:od_white"
+style = "bold bg:subtext1 fg:crust"
 
 [git_branch]
-format = "[ $symbol$branch(:$remote_branch) ]($style)"
-style = "bold bg:od_comment_grey fg:od_white"
-symbol = " "
+format = "[ $symbol $branch(:$remote_branch) ]($style)"
+style = "bold bg:subtext0 fg:crust"
+symbol = ""
 
 [git_metrics]
 disabled = false
-format = "[\\(](bold bg:od_comment_grey fg:od_white)([+$added]($added_style))([-$deleted]($deleted_style))[\\) ](bold bg:od_comment_grey fg:od_white)"
-added_style = "bg:od_comment_grey  fg:od_white"
-deleted_style = "bg:od_comment_grey  fg:od_white"
+format = "[\\(](bold bg:subtext0 fg:crust)([+$added]($added_style))([-$deleted]($deleted_style))[\\) ](bold bg:subtext0 fg:crust)"
+added_style = "bg:subtext0  fg:crust"
+deleted_style = "bg:subtext0  fg:crust"
 
 [time]
 disabled = false
-format = "[$time]($style)"
+format = "[ $time ]($style)"
 time_format = "%H:%M"
-style = "bold bg:od_dark_yellow fg:od_black"
+style = "bold bg:yellow fg:text"
 
 [os]
 disabled = false
-format = "[$symbol ]($style)"
-style = "bg:od_black fg:abs_white"
+format = "[ $symbol ]($style)"
+style = "bg:text fg:crust"
 
 [os.symbols]
 Macos = ""

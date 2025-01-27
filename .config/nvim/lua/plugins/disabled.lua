@@ -1,5 +1,5 @@
 local disabled_plugins = {
-  "catppuccin/nvim",
+  --"catppuccin/nvim",
   "akinsho/bufferline.nvim",
   "nvim-neo-tree/neo-tree.nvim",
   "nvimdev/dashboard-nvim",
