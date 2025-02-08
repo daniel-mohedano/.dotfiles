@@ -17,7 +17,7 @@ return {
                     run(server);
             ]],
           },
-          settings = { julia = { format = { indent = 4 } } },
+          settings = { julia = { format = { indent = 2 } } },
         },
         fortls = {
           settings = {
