@@ -8,7 +8,6 @@ vim.opt.expandtab = false -- use tabs instead of spaces
 vim.opt.shiftwidth = 4 -- size of indent
 --vim.opt.hlsearch = true
 --vim.opt.incsearch = true
-vim.opt.completeopt = { "menu", "menuone", "noinsert", "noselect" }
 
 vim.opt.swapfile = false
 vim.opt.backup = false
