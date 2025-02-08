@@ -30,4 +30,12 @@ return {
     lazy = true,
     cmd = "Git",
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "julia",
+      },
+    },
+  },
 }
