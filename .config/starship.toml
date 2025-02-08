@@ -101,3 +101,4 @@ style = "bg:text fg:crust"
 
 [os.symbols]
 Macos = ""
+Ubuntu = "󰌽"
