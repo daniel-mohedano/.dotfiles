@@ -24,7 +24,7 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave" }, {
 
 -- indent level change for certain filetypes
 vim.api.nvim_create_autocmd({ "FileType", "BufRead", "BufNewFile" }, {
-  pattern = { "lua", "java", "text", "javascript", "julia" },
+  pattern = { "lua", "java", "text", "javascript", "julia", "sh" },
   callback = function(args)
     vim.bo.shiftwidth = 2
     vim.bo.tabstop = 2
