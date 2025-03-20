@@ -97,7 +97,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-#ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
+ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
 
 . "$HOME/.cargo/env" 
 

@@ -24,6 +24,7 @@ return {
     opts = {
       modes = { insert = true, command = false, terminal = false },
     },
+    cond = true, -- explicitly enable in vscode
   },
   {
     "tpope/vim-fugitive",
@@ -37,5 +38,10 @@ return {
         "julia",
       },
     },
+    cond = true, -- explicitly enable in vscode
+  },
+  {
+    "folke/flash.nvim",
+    cond = true, -- explicitly enable in vscode
   },
 }

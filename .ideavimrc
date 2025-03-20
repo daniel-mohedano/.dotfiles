@@ -23,7 +23,7 @@ set updatetime=200
 set wrap=false
 
 """ Neovim mappings
-""" inoremap kj <esc>
+inoremap kj <esc>
 
 vnoremap < <gv
 vnoremap > >gv
