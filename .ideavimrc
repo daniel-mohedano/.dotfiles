@@ -1,6 +1,7 @@
 let mapleader=" "
 
 """ Common settings -------------------------
+set clipboard+=unnamed
 set completeopt="menu,menuone,noselect"
 set cursorline
 set expandtab
