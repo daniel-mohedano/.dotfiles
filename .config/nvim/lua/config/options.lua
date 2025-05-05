@@ -4,7 +4,7 @@
 vim.g.mapleader = " "
 
 vim.o.termguicolors = true
-vim.opt.expandtab = false -- use tabs instead of spaces
+vim.opt.expandtab = true -- use tabs instead of spaces
 vim.opt.shiftwidth = 4 -- size of indent
 --vim.opt.hlsearch = true
 --vim.opt.incsearch = true
