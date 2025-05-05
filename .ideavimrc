@@ -29,6 +29,8 @@ inoremap kj <esc>
 vnoremap < <gv
 vnoremap > >gv
 
+nnoremap <esc> :nohl<cr>
+
 nmap <leader>w :w<cr><esc>
 nmap <leader>- <c-w>s
 nmap <leader>| <c-w>v
