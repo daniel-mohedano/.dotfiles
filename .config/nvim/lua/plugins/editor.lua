@@ -17,15 +17,17 @@ return {
     cmd = "UndotreeToggle",
   },
   {
-    "nvim-telescope/telescope.nvim",
-    keys = {
-      { "<leader>gs", false },
-    },
-  },
-  {
-    "ibhagwan/fzf-lua",
-    keys = {
-      { "<leader>/", false },
+    "folke/snacks.nvim",
+    opts = {
+      picker = {
+        hidden = true,
+        ignored = true,
+        sources = {
+          files = { hidden = true },
+          grep = { hidden = true },
+          grep_word = { hidden = true },
+        },
+      },
     },
   },
 }

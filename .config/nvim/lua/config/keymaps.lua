@@ -25,10 +25,6 @@ if not vim.g.vscode then
     end
   end, { desc = "VimFugitive - Pull (rebase)" })
 
-  map("n", "<leader>/", function()
-    require("telescope.builtin").live_grep({ additional_args = { "--hidden" } })
-  end, { desc = "Telescope - Grep String" })
-
   map("n", "<leader>pv", "<cmd>Oil<cr>", { desc = "Project view with oil" })
 else
   -- vscode keymaps
