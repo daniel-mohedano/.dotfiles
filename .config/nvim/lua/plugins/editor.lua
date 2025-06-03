@@ -22,6 +22,10 @@ return {
       picker = {
         hidden = true,
         ignored = true,
+        main = {
+          file = false,
+          current = true,
+        },
         sources = {
           files = { hidden = true },
           grep = { hidden = true },
