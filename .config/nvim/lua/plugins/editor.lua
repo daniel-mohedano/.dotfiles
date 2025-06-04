@@ -22,14 +22,35 @@ return {
       picker = {
         hidden = true,
         ignored = true,
+        formatters = {
+          file = {
+            filename_first = true,
+            truncate = 80,
+          },
+        },
+        layout = {
+          preset = "dropdown",
+        },
         main = {
           file = false,
           current = true,
         },
         sources = {
-          files = { hidden = true },
+          files = { hidden = true, ignored = true },
           grep = { hidden = true },
           grep_word = { hidden = true },
+        },
+        win = {
+          input = {
+            keys = {
+              ["<c-l>"] = { "toggle_preview", mode = { "i", "n" } },
+            },
+          },
+          list = {
+            keys = {
+              ["<c-l>"] = "toggle_preview",
+            },
+          },
         },
       },
     },
