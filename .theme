@@ -1,0 +1,19 @@
+#!/bin/sh
+
+THEME=light
+
+theme() {
+    case "$1" in
+    light)
+        export DAN_THEME=light
+        export STARSHIP_CONFIG=$HOME/.config/starship/starship-light.toml
+        ;;
+    dark)
+        export DAN_THEME=dark
+        export STARSHIP_CONFIG=$HOME/.config/starship/starship-dark.toml
+        ;;
+    *) echo "usage: theme {light|dark}" ;;
+    esac
+}
+
+theme $THEME

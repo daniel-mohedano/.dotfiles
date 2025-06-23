@@ -1,0 +1,70 @@
+format = """
+$os\
+$directory\
+$git_branch\
+$git_metrics\
+[ ]()
+"""
+
+right_format = """
+$character\
+$cmd_duration\
+$time\
+"""
+
+add_newline = false
+
+palette = "light"
+[palettes.light]
+success = "#40a02b"
+error = "#d20f39"
+warning = "#df8e1d"
+foreground = "#4c4f69"
+background = "#dce0e8"
+accent1 = "#5c5f77"
+accent2 = "#6c6f85"
+base = "#eff1f5"
+
+[character]
+format = "[ $symbol ](bg:background)"
+success_symbol = "[](bold bg:background fg:success)"
+error_symbol = "[✖](bold bg:background  fg:error)"
+
+[cmd_duration]
+min_time = 1_000
+format = "[$duration ]($style)"
+style = "bg:background fg:foreground"
+
+[directory]
+format = "[ $path ]($style)[$read_only]($read_only_style)"
+read_only = " R"
+read_only_style = "error"
+truncation_length = 5
+truncate_to_repo = false
+style = "bold bg:accent1 fg:background"
+
+[git_branch]
+format = "[ $symbol $branch(:$remote_branch) ]($style)"
+style = "bold bg:accent2 fg:background"
+symbol = ""
+
+[git_metrics]
+disabled = false
+format = "[\\(](bold bg:accent2 fg:background)([+$added]($added_style))([-$deleted]($deleted_style))[\\) ](bold bg:accent2 fg:background)"
+added_style = "bg:accent2  fg:background"
+deleted_style = "bg:accent2  fg:background"
+
+[time]
+disabled = false
+format = "[ $time ]($style)"
+time_format = "%H:%M"
+style = "bold bg:warning fg:foreground"
+
+[os]
+disabled = false
+format = "[ $symbol ]($style)"
+style = "bg:foreground fg:background"
+
+[os.symbols]
+Macos = ""
+Ubuntu = "󰌽"
