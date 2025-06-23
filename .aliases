@@ -1,11 +1,28 @@
 #!/bin/sh
-# Listing
+
 alias ls='eza -l --group-directories-first'
 alias ll='eza -lah --group-directories-first'
-
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-# Other aliases
 alias vim="nvim"
+
+conda_initialize() {
+    __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+            . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+        else
+            export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+        fi
+    fi
+    unset __conda_setup
+}
+
+jltest() {
+    args=$(printf '"%s", ' "$@")
+    args="[${args%, }]"
+    julia --project -e "import Pkg; Pkg.test(test_args=$args)"
+}

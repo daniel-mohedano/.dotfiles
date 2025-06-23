@@ -33,7 +33,7 @@ return {
         },
         main = {
           file = false,
-          current = true,
+          current = true, -- pick opened in current file, not leftmost
         },
         sources = {
           files = { hidden = true, ignored = true },
