@@ -21,8 +21,8 @@ error = "#d20f39"
 warning = "#df8e1d"
 foreground = "#dce0e8"
 background = "#4c4f69"
-accent1 = "#6c6f85"
-accent2 = "#5c5f77"
+accent1 = "#ccd0da"
+accent2 = "#acb0be"
 base = "#eff1f5"
 
 [character]

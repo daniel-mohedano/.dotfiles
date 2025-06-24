@@ -1,0 +1,35 @@
+#!/bin/sh
+
+THEME_FILE=~/.theme-current
+
+theme() {
+    case "$1" in
+    light)
+        echo "light" >$THEME_FILE
+        # starship
+        export STARSHIP_CONFIG=$HOME/.config/starship/starship-light.toml
+        # alacritty
+        if [ "$ALACRITTY" = "true" ]; then
+            ln -sf $HOME/.config/alacritty/theme-light.toml $HOME/.config/alacritty/theme-active.toml
+            touch $HOME/.config/alacritty/alacritty.toml
+        fi
+        # tmux
+        tmux source-file ~/.config/tmux/theme-light.conf
+        ;;
+    dark)
+        echo "dark" >$THEME_FILE
+        # starship
+        export STARSHIP_CONFIG=$HOME/.config/starship/starship-dark.toml
+        # alacritty
+        if [ "$ALACRITTY" = "true" ]; then
+            ln -sf $HOME/.config/alacritty/theme-dark.toml $HOME/.config/alacritty/theme-active.toml
+            touch $HOME/.config/alacritty/alacritty.toml
+        fi
+        # tmux
+        tmux source-file ~/.config/tmux/theme-dark.conf
+        ;;
+    *) echo "usage: theme {light|dark}" ;;
+    esac
+}
+
+theme $(cat "$THEME_FILE")

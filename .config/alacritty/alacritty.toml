@@ -1,10 +1,8 @@
 # Import colorscheme
-general.import = [
-	# "tokyonight.toml",
-	"catppuccin-latte.toml",
-]
+general.import = ["~/.config/alacritty/theme-active.toml"]
 
 [env]
+ALACRITTY = "true"
 TERM = "xterm-256color"
 
 [window]

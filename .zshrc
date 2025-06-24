@@ -39,4 +39,4 @@ export PATH
 ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
 . "$HOME/.cargo/env" 
 [ -f ~/.aliases ] && source ~/.aliases
-[ -f ~/.theme ] && source ~/.theme
+[ -f ~/.theme-set ] && source ~/.theme-set
