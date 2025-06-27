@@ -6,6 +6,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 [ -f $HOME/.config-work ] && source $HOME/.config-work
 
 # starship
+[ -f ~/.theme-set ] && source ~/.theme-set
 eval "$(starship init zsh --print-full-init)"
 
 # exports
@@ -39,4 +40,3 @@ export PATH
 ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
 . "$HOME/.cargo/env" 
 [ -f ~/.aliases ] && source ~/.aliases
-[ -f ~/.theme-set ] && source ~/.theme-set
