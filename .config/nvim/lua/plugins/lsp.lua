@@ -31,6 +31,21 @@ return {
             },
           },
         },
+        gopls = {
+          settings = {
+            gopls = {
+              ["ui.inlayhint.hints"] = {
+                compositeLiteralFields = true,
+                constantValues = true,
+              },
+              ["ui.codelenses"] = {
+                test = true,
+                generate = true,
+              },
+              ["ui.diagnostic.staticcheck"] = true,
+            },
+          },
+        },
       },
     },
   },

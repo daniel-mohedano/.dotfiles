@@ -33,11 +33,41 @@ vim.api.nvim_create_autocmd({ "FileType", "BufRead", "BufNewFile" }, {
   end,
 })
 vim.api.nvim_create_autocmd({ "FileType", "BufRead", "BufNewFile" }, {
+  pattern = { "go" },
+  callback = function(args)
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+    vim.bo.softtabstop = 4
+    vim.bo.expandtab = false
+  end,
+})
+vim.api.nvim_create_autocmd({ "FileType", "BufRead", "BufNewFile" }, {
   pattern = { "markdown" },
   callback = function()
     vim.bo.shiftwidth = 4
     vim.bo.tabstop = 4
     vim.bo.softtabstop = 4
     vim.bo.expandtab = true
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufReadPre", "FileReadPre" }, {
+  callback = function()
+    local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(0))
+    if ok and stats and stats.size > 1024 * 1024 then
+      vim.b.large_file = true
+      vim.opt_local.eventignore:append("FileType")
+      vim.opt_local.bufhidden = "unload"
+      vim.opt_local.undolevels = -1
+      vim.opt_local.spell = false
+      vim.opt_local.swapfile = false
+      vim.opt_local.undofile = false
+      vim.opt_local.breakindent = false
+      vim.opt_local.colorcolumn = ""
+      vim.opt_local.statuscolumn = ""
+      vim.opt_local.signcolumn = "no"
+      vim.opt_local.foldcolumn = "0"
+      vim.opt_local.winbar = ""
+    end
   end,
 })
