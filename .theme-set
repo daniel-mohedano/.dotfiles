@@ -1,35 +1,49 @@
 #!/bin/sh
-export STARSHIP_CONFIG=$HOME/.config/starship.toml
 
-THEME_FILE=~/.theme-current
-theme() {
+THEME_FILE="${HOME}/.theme-current"
+
+theme_current() {
+    if [ -r "$THEME_FILE" ]; then
+        mode="$(tr -d '[:space:]' < "$THEME_FILE")"
+        if [ "$mode" = "dark" ]; then
+            printf '%s\n' "dark"
+            return
+        fi
+    fi
+    printf '%s\n' "light"
+}
+
+theme_starship_config() {
     case "$1" in
-    light)
-        echo "light" >$THEME_FILE
-        # starship
-        ln -sf $HOME/.config/starship/starship-light.toml $HOME/.config/starship.toml
-        # alacritty
-        if [ "$ALACRITTY" = "true" ]; then
-            ln -sf $HOME/.config/alacritty/theme-light.toml $HOME/.config/alacritty/theme-active.toml
-            touch $HOME/.config/alacritty/alacritty.toml
-        fi
-        # tmux
-        tmux source-file ~/.config/tmux/theme-light.conf
-        ;;
-    dark)
-        echo "dark" >$THEME_FILE
-        # starship
-        ln -sf $HOME/.config/starship/starship-dark.toml $HOME/.config/starship.toml
-        # alacritty
-        if [ "$ALACRITTY" = "true" ]; then
-            ln -sf $HOME/.config/alacritty/theme-dark.toml $HOME/.config/alacritty/theme-active.toml
-            touch $HOME/.config/alacritty/alacritty.toml
-        fi
-        # tmux
-        tmux source-file ~/.config/tmux/theme-dark.conf
-        ;;
-    *) echo "usage: theme {light|dark}" ;;
+        dark) printf '%s\n' "${HOME}/.config/starship/starship-dark.toml" ;;
+        *) printf '%s\n' "${HOME}/.config/starship/starship-light.toml" ;;
     esac
 }
 
-theme $(cat "$THEME_FILE")
+theme() {
+    case "$1" in
+        light|dark) ;;
+        *) echo "usage: theme {light|dark}"; return 1 ;;
+    esac
+
+    mode="$1"
+    printf '%s\n' "$mode" > "$THEME_FILE"
+
+    # starship
+    export STARSHIP_CONFIG="$(theme_starship_config "$mode")"
+    ln -sf "$STARSHIP_CONFIG" "${HOME}/.config/starship.toml"
+
+    # alacritty
+    if [ "$ALACRITTY" = "true" ]; then
+        ln -sf "${HOME}/.config/alacritty/theme-${mode}.toml" "${HOME}/.config/alacritty/theme-active.toml"
+        touch "${HOME}/.config/alacritty/alacritty.toml"
+    fi
+
+    # tmux (only if a server is reachable)
+    if command -v tmux >/dev/null 2>&1 && tmux info >/dev/null 2>&1; then
+        tmux source-file "${HOME}/.config/tmux/theme-${mode}.conf"
+    fi
+}
+
+# Startup path: only set prompt config, avoid re-applying theme side effects.
+export STARSHIP_CONFIG="$(theme_starship_config "$(theme_current)")"
