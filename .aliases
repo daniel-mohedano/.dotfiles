@@ -6,6 +6,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias vim="nvim"
+alias gl="git log"
+alias glo="git log --oneline"
 
 conda_initialize() {
     __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
