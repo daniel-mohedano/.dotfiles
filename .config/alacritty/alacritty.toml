@@ -21,3 +21,16 @@ size = 18.0
 
 [terminal]
 shell = "/bin/zsh"
+
+[hints]
+# home row labels first
+alphabet = "jfkdls;ahgurieowpq"
+
+[[hints.enabled]]
+regex = "(https?://|ftp://|mailto:|file://)[^\\s]+"
+hyperlinks = true
+post_processing = true
+persist = false
+command = { program = "/usr/bin/open" }
+mouse = { enabled = true }
+binding = { key = "U", mods = "Command|Shift" }
