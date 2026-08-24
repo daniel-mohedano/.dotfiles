@@ -26,6 +26,11 @@ if not vim.g.vscode then
   end, { desc = "VimFugitive - Pull (rebase)" })
 
   map("n", "<leader>pv", "<cmd>Oil<cr>", { desc = "Project view with oil" })
+
+  map("n", "<leader>fp", function()
+    vim.fn.setreg("+", vim.fn.expand("%:p"))
+    print("Copied: " .. vim.fn.expand("%:p"))
+  end, { desc = "Copy current file path" })
 else
   -- vscode keymaps
   map("n", "<leader>q", function()
